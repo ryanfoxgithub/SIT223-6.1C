@@ -34,9 +34,8 @@ pipeline {
             }
         }
         stage('Code Analysis') {
-                steps {
-                    echo "Analysing Code"
-                }
+            steps {
+                echo "Analysing Code"
             }
         }
     }
