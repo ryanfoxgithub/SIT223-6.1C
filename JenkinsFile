@@ -25,7 +25,7 @@ pipeline {
                 success{
                     mail to: "mcubed132@gmail.com",
                     subject: "Unit and Integration Tests Complete",
-                    body: "Confirming Unit and Integration Tests were successfully completed."
+                    body: "Confirming Unit and Integration Tests were successfully completed. ${BUILD_LOG, maxLines, escapeHtml}"
                 }
                 failure{
                     mail to: "mcubed132@gmail.com",
