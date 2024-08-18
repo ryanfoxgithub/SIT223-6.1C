@@ -24,7 +24,7 @@ pipeline {
             post {
                 success{
                     emailext(
-                        to: 'mcubed132@g.com',
+                        to: 'mcubed132@gmail.com',
                         subject: "Unit and Integration Tests Complete",
                         body: "Confirming Unit and Integration Tests were successfully completed.",
                         attachLog: true, attachmentsPattern: "**/*.txt",compressLog: true
@@ -32,7 +32,7 @@ pipeline {
                 }
                 failure{
                     emailext(
-                        to: 'mcubed132@g.com',
+                        to: 'mcubed132@gmail.com',
                         subject: "Unit and Integration Tests Failure",
                         body: "ERROR: THERE WAS A FAILURE IN UNIT AND INTEGRATION TESTS",
                         attachLog: true, attachmentsPattern: "**/*.txt",compressLog: true
@@ -59,14 +59,14 @@ pipeline {
             post {
                 success{
                     emailext(
-                        to: 'mcubed132@g.com',
+                        to: 'mcubed132@gmail.com',
                         subject: "Security Scan Completition",
                         body: "Confirmation of security scan successful completition."          
                     )
                 }
                 failure{
                     emailext(
-                        to: 'mcubed132@g.com',
+                        to: 'mcubed132@gmail.com',
                         subject: "Security Scan Failure",
                         body: "ERROR: THERE WAS A FAILURE THE SECURITY SCAN"
                     )
@@ -92,14 +92,14 @@ pipeline {
             post {
                 success{
                     emailext(
-                        to: 'mcubed132@g.com',
+                        to: 'mcubed132@gmail.com',
                         subject: "Integration test on staging - Success",
                         body: "Staging has had an integration test and it was successful."
                      )
                 }
                 failure{
                     emailext(
-                        to: 'mcubed132@g.com',
+                        to: 'mcubed132@gmail.com',
                         subject: "Integration tests on staging failure",
                         body: "ERROR: THERE WAS A FAILURE IN INTEGRATION TESTS ON STAGING"
                     )
