@@ -24,13 +24,13 @@ pipeline {
             post {
                 success{
                     mail to: "mcubed132@gmail.com",
-                    attachLog: true,
+                    emailext attachLog: true,
                     subject: "Unit and Integration Tests Complete",
                     body: "Confirming Unit and Integration Tests were successfully completed."
                 }
                 failure{
                     mail to: "mcubed132@gmail.com",
-                    attachLog: true,
+                    emailext attachLog: true,
                     subject: "Unit and Integration Tests Failure",
                     body: "ERROR: THERE WAS A FAILURE IN UNIT AND INTEGRATION TESTS"
                 }
