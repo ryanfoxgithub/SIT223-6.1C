@@ -59,7 +59,7 @@ pipeline {
             post {
                 success{
                     emailext(
-                        mail to: "mcubed132@gmail.com",
+                        to: "mcubed132@gmail.com",
                         subject: "Security Scan Completition",
                         body: "Confirmation of security scan successful completition."          
                     )
