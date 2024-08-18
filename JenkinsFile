@@ -23,12 +23,20 @@ pipeline {
             }
             post {
                 success{
-                        emailext attachLog: true, body: "${currentBuild.result}: ${BUILD_URL}", compressLog: true, replyTo: 'mcubed132@gmail.com',
-       subject: "Build Notification: ${JOB_NAME}-Build# ${BUILD_NUMBER} ${currentBuild.result}", to: 'mcubed132@gmail.com'
+                    emailext(
+                        to: 'mcubed132@gmail.com',
+                        subject: "Unit and Integration Tests Complete",
+                        body: "Confirming Unit and Integration Tests were successfully completed.",
+                        attachLog: true, attachmentsPattern: "**/*.txt",compressLog: true
+                    )
                 }
                 failure{
-                    emailext attachLog: true, body: "${currentBuild.result}: ${BUILD_URL}", compressLog: true, replyTo: 'mcubed132@gmail.com',
-       subject: "Build Notification: ${JOB_NAME}-Build# ${BUILD_NUMBER} ${currentBuild.result}", to: 'mcubed132@gmail.com'
+                    emailext(
+                        to: 'mcubed132@gmail.com',
+                        subject: "Unit and Integration Tests Complete",
+                        body: "Confirming Unit and Integration Tests were successfully completed.",
+                        attachLog: true, attachmentsPattern: "**/*.txt",compressLog: true
+                    )
                 }
             }
         }
@@ -50,12 +58,20 @@ pipeline {
             }
             post {
                 success{
-                    emailext attachLog: true, body: "${currentBuild.result}: ${BUILD_URL}", compressLog: true, replyTo: 'mcubed132@gmail.com',
-       subject: "Build Notification: ${JOB_NAME}-Build# ${BUILD_NUMBER} ${currentBuild.result}", to: 'mcubed132@gmail.com'
+                    emailext(
+                        to: 'mcubed132@gmail.com',
+                        subject: "Unit and Integration Tests Complete",
+                        body: "Confirming Unit and Integration Tests were successfully completed.",
+                        attachLog: true, attachmentsPattern: "**/*.txt",compressLog: true
+                    )
                 }
                 failure{
-                    emailext attachLog: true, body: "${currentBuild.result}: ${BUILD_URL}", compressLog: true, replyTo: 'mcubed132@gmail.com',
-       subject: "Build Notification: ${JOB_NAME}-Build# ${BUILD_NUMBER} ${currentBuild.result}", to: 'mcubed132@gmail.com'
+                    emailext(
+                        to: 'mcubed132@gmail.com',
+                        subject: "Unit and Integration Tests Complete",
+                        body: "Confirming Unit and Integration Tests were successfully completed.",
+                        attachLog: true, attachmentsPattern: "**/*.txt",compressLog: true
+                    )
                 }
             }
         }
@@ -77,12 +93,20 @@ pipeline {
             }
             post {
                 success{
-                    emailext attachLog: true, body: "${currentBuild.result}: ${BUILD_URL}", compressLog: true, replyTo: 'mcubed132@gmail.com',
-       subject: "Build Notification: ${JOB_NAME}-Build# ${BUILD_NUMBER} ${currentBuild.result}", to: 'mcubed132@gmail.com'   
+                    emailext(
+                        to: 'mcubed132@gmail.com',
+                        subject: "Unit and Integration Tests Complete",
+                        body: "Confirming Unit and Integration Tests were successfully completed.",
+                        attachLog: true, attachmentsPattern: "**/*.txt",compressLog: true
+                    )
                 }
                 failure{
-                    emailext attachLog: true, body: "${currentBuild.result}: ${BUILD_URL}", compressLog: true, replyTo: 'mcubed132@gmail.com',
-       subject: "Build Notification: ${JOB_NAME}-Build# ${BUILD_NUMBER} ${currentBuild.result}", to: 'mcubed132@gmail.com'
+                    emailext(
+                        to: 'mcubed132@gmail.com',
+                        subject: "Unit and Integration Tests Complete",
+                        body: "Confirming Unit and Integration Tests were successfully completed.",
+                        attachLog: true, attachmentsPattern: "**/*.txt",compressLog: true
+                    )
                 }
             }
         }
