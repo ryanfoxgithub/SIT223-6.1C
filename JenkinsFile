@@ -79,12 +79,6 @@ pipeline {
                 success{
                     emailext attachLog: true, body: "${currentBuild.result}: ${BUILD_URL}", compressLog: true, replyTo: 'mcubed132@gmail.com',
        subject: "Build Notification: ${JOB_NAME}-Build# ${BUILD_NUMBER} ${currentBuild.result}", to: 'mcubed132@gmail.com'emailext(
-                        to: 'mcubed132@gmail.com',
-                        subject: '${PROJECT_NAME} - Build #${BUILD_NUMBER} - ${BUILD_STATUS}!',
-                        body: """${PROJECT_NAME} - Build #${BUILD_NUMBER} - ${BUILD_STATUS}:
-                        
-                        Check console output at ${BUILD_URL} to view the results.""",
-                        attachLog: true
                     )
                 }
                 failure{
