@@ -31,7 +31,7 @@ pipeline {
                 failure{
                     emailext to: 'mcubed132@gmail.com',
                         subject: "Unit and Integration Tests Complete",
-                        body: "Confirming Unit and Integration Tests were successfully completed.",
+                        body: "Unit and Integration Tests Failure!",
                         attachLog: true, attachmentsPattern: "**/*.txt",compressLog: true 
                 }
             }
@@ -55,14 +55,14 @@ pipeline {
             post {
                 success{
                     emailext to: 'mcubed132@gmail.com',
-                        subject: "Unit and Integration Tests Complete",
-                        body: "Confirming Unit and Integration Tests were successfully completed.",
+                        subject: "Security Scan Complete",
+                        body: "Confirming Security Scan were successfully completed.",
                         attachLog: true, attachmentsPattern: "**/*.txt",compressLog: true 
                 }
                 failure{
                     emailext to: 'mcubed132@gmail.com',
-                        subject: "Unit and Integration Tests Complete",
-                        body: "Confirming Unit and Integration Tests were successfully completed.",
+                        subject: "Security Scan Complete",
+                        body: "Security Scan Has Failed.",
                         attachLog: true, attachmentsPattern: "**/*.txt",compressLog: true 
                 }
             }
@@ -75,7 +75,7 @@ pipeline {
                 echo "AWS CLI: Push complete!"
             }
         }
-        stage('Integration tests on Staging') { // Stage 6
+        stage('Integration Tests on Staging') { // Stage 6
             steps {
                 //Postman ---> https://www.postman.com/
                 echo "Begin Postman API testing..."
@@ -86,14 +86,14 @@ pipeline {
             post {
                 success{
                     emailext to: 'mcubed132@gmail.com',
-                        subject: "Unit and Integration Tests Complete",
-                        body: "Confirming Unit and Integration Tests were successfully completed.",
+                        subject: "Integration Tests on Staging Complete",
+                        body: "Integration Tests on Staging were successfully completed.",
                         attachLog: true, attachmentsPattern: "**/*.txt",compressLog: true 
                 }
                 failure{
                     emailext to: 'mcubed132@gmail.com',
-                        subject: "Unit and Integration Tests Complete",
-                        body: "Confirming Unit and Integration Tests were successfully completed.",
+                        subject: "Integration Tests on Staging Failure",
+                        body: "Integration Tests on Staging Had An Error!",
                         attachLog: true, attachmentsPattern: "**/*.txt",compressLog: true 
                 }
             }
