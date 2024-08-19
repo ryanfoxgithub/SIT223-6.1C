@@ -23,20 +23,16 @@ pipeline {
             }
             post {
                 success{
-                    emailext(
-                        to: 'mcubed132@gmail.com',
+                    emailext to: 'mcubed132@gmail.com',
                         subject: "Unit and Integration Tests Complete",
                         body: "Confirming Unit and Integration Tests were successfully completed.",
                         attachLog: true, attachmentsPattern: "**/*.txt",compressLog: true
-                    )
                 }
                 failure{
-                    emailext(
-                        to: 'mcubed132@gmail.com',
+                    emailext to: 'mcubed132@gmail.com',
                         subject: "Unit and Integration Tests Complete",
                         body: "Confirming Unit and Integration Tests were successfully completed.",
-                        attachLog: true, attachmentsPattern: "**/*.txt",compressLog: true
-                    )
+                        attachLog: true, attachmentsPattern: "**/*.txt",compressLog: true 
                 }
             }
         }
@@ -58,20 +54,16 @@ pipeline {
             }
             post {
                 success{
-                    emailext(
-                        to: 'mcubed132@gmail.com',
+                    emailext to: 'mcubed132@gmail.com',
                         subject: "Unit and Integration Tests Complete",
                         body: "Confirming Unit and Integration Tests were successfully completed.",
-                        attachLog: true, attachmentsPattern: "**/*.txt",compressLog: true
-                    )
+                        attachLog: true, attachmentsPattern: "**/*.txt",compressLog: true 
                 }
                 failure{
-                    emailext(
-                        to: 'mcubed132@gmail.com',
+                    emailext to: 'mcubed132@gmail.com',
                         subject: "Unit and Integration Tests Complete",
                         body: "Confirming Unit and Integration Tests were successfully completed.",
-                        attachLog: true, attachmentsPattern: "**/*.txt",compressLog: true
-                    )
+                        attachLog: true, attachmentsPattern: "**/*.txt",compressLog: true 
                 }
             }
         }
@@ -93,20 +85,16 @@ pipeline {
             }
             post {
                 success{
-                    emailext(
-                        to: 'mcubed132@gmail.com',
+                    emailext to: 'mcubed132@gmail.com',
                         subject: "Unit and Integration Tests Complete",
                         body: "Confirming Unit and Integration Tests were successfully completed.",
-                        attachLog: true, attachmentsPattern: "**/*.txt",compressLog: true
-                    )
+                        attachLog: true, attachmentsPattern: "**/*.txt",compressLog: true 
                 }
                 failure{
-                    emailext(
-                        to: 'mcubed132@gmail.com',
+                    emailext to: 'mcubed132@gmail.com',
                         subject: "Unit and Integration Tests Complete",
                         body: "Confirming Unit and Integration Tests were successfully completed.",
-                        attachLog: true, attachmentsPattern: "**/*.txt",compressLog: true
-                    )
+                        attachLog: true, attachmentsPattern: "**/*.txt",compressLog: true 
                 }
             }
         }
