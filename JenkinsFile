@@ -10,7 +10,6 @@ pipeline {
                 sleep 15
                 echo "Building Automation Tool Maven completed build"
             }
-
         }
         stage('Unit and Integration Tests') { // Stage 2
             steps {
@@ -34,7 +33,7 @@ pipeline {
                     emailext to: 'mcubed132@gmail.com',
                         subject: "Unit and Integration Tests Complete",
                         body: "Unit and Integration Tests Failure!",
-                        attachLog: true, attachmentsPattern: "**/*.txt",compressLog: true 
+                        attachLog: true, compressLog: true 
                 }
             }
         }
@@ -59,13 +58,13 @@ pipeline {
                     emailext to: 'mcubed132@gmail.com',
                         subject: "Security Scan Complete",
                         body: "Confirming Security Scan were successfully completed.",
-                        attachLog: true, attachmentsPattern: "**/*.txt",compressLog: true 
+                        attachLog: true, compressLog: true
                 }
                 failure{
                     emailext to: 'mcubed132@gmail.com',
                         subject: "Security Scan Complete",
                         body: "Security Scan Has Failed.",
-                        attachLog: true, attachmentsPattern: "**/*.txt",compressLog: true 
+                        attachLog: true, compressLog: true
                 }
             }
         }
@@ -90,13 +89,13 @@ pipeline {
                     emailext to: 'mcubed132@gmail.com',
                         subject: "Integration Tests on Staging Complete",
                         body: "Integration Tests on Staging were successfully completed.",
-                        attachLog: true, attachmentsPattern: "**/*.txt",compressLog: true 
+                        attachLog: true, compressLog: true
                 }
                 failure{
                     emailext to: 'mcubed132@gmail.com',
                         subject: "Integration Tests on Staging Failure",
                         body: "Integration Tests on Staging Had An Error!",
-                        attachLog: true, attachmentsPattern: "**/*.txt",compressLog: true 
+                        attachLog: true, compressLog: true
                 }
             }
         }
